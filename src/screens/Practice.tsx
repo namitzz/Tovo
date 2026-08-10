@@ -13,6 +13,7 @@ import {
   GraduationCap,
   Target,
   CalendarClock,
+  Repeat,
 } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 import { useApp } from '../store/app';
@@ -48,6 +49,7 @@ export default function Practice() {
         { icon: ListChecks, title: 'Multiple choice', sub: 'Word → meaning', to: '/quiz/mcq' },
         { icon: Keyboard, title: 'Type-in', sub: 'Type the translation', to: '/quiz/type' },
         { icon: BookText, title: 'Grammar Gym', sub: '365 rules · gamified', to: '/quiz/grammar' },
+        { icon: Repeat, title: 'Verb Gym', sub: 'Conjugate in present tense', to: '/verbs' },
         { icon: TextCursorInput, title: 'Cloze', sub: 'Fill the gap in real sentences', to: '/quiz/cloze' },
         { icon: Brain, title: 'Hard MCQ', sub: '110 tricky questions', to: '/quiz/hard' },
       ],

@@ -3,7 +3,7 @@ import { ArrowLeft } from 'lucide-react';
 import { Stagger, Item } from '../motion/Reveal';
 import { analyticsEnabled } from '../utils/analytics';
 import { monitoringEnabled } from '../utils/monitoring';
-import { syncEnabled } from '../lib/supabase';
+import { syncConfigured } from '../lib/syncConfig';
 import { APP_NAME } from '../brand';
 
 // Where people can reach you. Swap for a dedicated support address if you set
@@ -56,7 +56,7 @@ export default function Privacy() {
         </p>
       </Section>
 
-      {syncEnabled() ? (
+      {syncConfigured() ? (
         <Section title="Optional account &amp; cloud sync">
           <p>
             You can optionally sign in with your email to back up your progress and continue on

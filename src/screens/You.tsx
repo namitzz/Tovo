@@ -22,7 +22,7 @@ import {
   requestNotificationPermission,
 } from '../utils/notifications';
 import { exportData, importData } from '../utils/backup';
-import { syncEnabled } from '../lib/supabase';
+import { syncConfigured } from '../lib/syncConfig';
 import Counter from '../motion/Counter';
 import Pressable from '../motion/Pressable';
 import Avatar from '../ui/Avatar';
@@ -123,7 +123,7 @@ export default function You() {
         </Pressable>
       </Item>
 
-      {syncEnabled() && (
+      {syncConfigured() && (
         <Item>
           <Pressable
             onClick={() => navigate('/account')}
