@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Check, X } from 'lucide-react';
+import { Check, X, Volume2 } from 'lucide-react';
 import { speak } from '../utils/tts';
 import { useApp } from '../store/app';
 import { useQuizSession } from '../features/quiz/useQuizSession';
@@ -195,7 +195,10 @@ export default function Verbs() {
             style={{ background: result ? 'var(--good-soft)' : 'var(--bad-soft)', color: result ? 'var(--good)' : 'var(--bad)' }}
           >
             {result ? <Check size={18} /> : <X size={18} />}
-            {result ? 'Correct' : `${PRONOUNS[current.person]} ${expected}`}
+            <span>{result ? 'Correct' : `${PRONOUNS[current.person]} ${expected}`}</span>
+            <button onClick={() => speak(expected, 'de-DE')} aria-label="Hear it" className="ml-1">
+              <Volume2 size={16} />
+            </button>
           </div>
         )}
       </motion.div>
