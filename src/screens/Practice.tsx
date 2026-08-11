@@ -15,6 +15,7 @@ import {
   CalendarClock,
   Repeat,
   Columns3,
+  BookOpen,
 } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 import { useApp } from '../store/app';
@@ -59,6 +60,7 @@ export default function Practice() {
     {
       label: 'more',
       modes: [
+        { icon: BookOpen, title: 'Stories', sub: 'Read short texts · tap any word', to: '/stories' },
         { icon: Blocks, title: 'Sentence Lab', sub: 'Build · dictate · translate', to: '/sentence' },
         { icon: Mic, title: 'Speak & Score', sub: 'Say it out loud', to: '/speak' },
         { icon: Zap, title: 'Reflex', sub: 'Gender speed game', to: '/reflex' },

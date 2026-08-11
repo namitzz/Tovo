@@ -35,6 +35,7 @@ const Privacy = lazy(() => import('./screens/Privacy'));
 const Account = lazy(() => import('./screens/Account'));
 const Verbs = lazy(() => import('./screens/Verbs'));
 const Cases = lazy(() => import('./screens/Cases'));
+const Stories = lazy(() => import('./screens/Stories'));
 
 import { trackPageview } from './utils/analytics';
 import { syncConfigured } from './lib/syncConfig';
@@ -98,6 +99,7 @@ function Shell() {
             <Route path="/reflex" element={wrap(<Reflex />)} />
             <Route path="/verbs" element={wrap(<Verbs />)} />
             <Route path="/cases" element={wrap(<Cases />)} />
+            <Route path="/stories" element={wrap(<Stories />)} />
             <Route path="/puzzle" element={wrap(<Puzzle />)} />
             <Route path="/privacy" element={wrap(<Privacy />)} />
             <Route path="/account" element={wrap(<Account />)} />
