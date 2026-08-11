@@ -21,6 +21,7 @@ const WEAK_SOURCES: Record<string, { name: string; route: string }> = {
   cloze: { name: 'Cloze', route: '/quiz/cloze' },
   verb: { name: 'Verb forms', route: '/verbs' },
   gender: { name: 'Gender (der/die/das)', route: '/reflex' },
+  case: { name: 'Cases & articles', route: '/cases' },
 };
 
 export interface AdaptiveSession {

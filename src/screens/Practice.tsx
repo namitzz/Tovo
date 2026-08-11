@@ -14,6 +14,7 @@ import {
   Target,
   CalendarClock,
   Repeat,
+  Columns3,
 } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 import { useApp } from '../store/app';
@@ -50,6 +51,7 @@ export default function Practice() {
         { icon: Keyboard, title: 'Type-in', sub: 'Type the translation', to: '/quiz/type' },
         { icon: BookText, title: 'Grammar Gym', sub: '365 rules · gamified', to: '/quiz/grammar' },
         { icon: Repeat, title: 'Verb Gym', sub: 'Conjugate in present tense', to: '/verbs' },
+        { icon: Columns3, title: 'Case Trainer', sub: 'der/die/das across the 4 cases', to: '/cases' },
         { icon: TextCursorInput, title: 'Cloze', sub: 'Fill the gap in real sentences', to: '/quiz/cloze' },
         { icon: Brain, title: 'Hard MCQ', sub: '110 tricky questions', to: '/quiz/hard' },
       ],
